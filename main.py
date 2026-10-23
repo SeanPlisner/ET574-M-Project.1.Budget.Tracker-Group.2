@@ -1,8 +1,9 @@
+from tracker import add_expense, summary_report, view_all_expenses
+
+
 print("Welcome to Budget Tracker!")
 
-choice = ""
-
-while choice != "4":
+while True:
     print("\n1. Add Expense")
     print("2. View Summary")
     print("3. View All Expenses")
@@ -11,16 +12,17 @@ while choice != "4":
     choice = input("Enter your choice: ")
 
     if choice == "1":
-        print("\nAdd expense selected")
+        add_expense()
 
     elif choice == "2":
-        print("\nViewing summary selected")
+        summary_report()
 
     elif choice == "3":
-        print("\nViewing all expenses selected")
+        view_all_expenses()
 
     elif choice == "4":
         print("\nExiting the program. Bye!")
+        break
 
     else:
         print("\nInvalid choice. Please try again. Select 1, 2, 3, or 4.")
