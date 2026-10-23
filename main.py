@@ -20,7 +20,7 @@ while choice != "4":
         print("\nViewing all expenses selected")
 
     elif choice == "4":
-        print("\nExiting the program. Goodbye!")
+        print("\nExiting the program. Bye!")
 
     else:
         print("\nInvalid choice. Please try again. Select 1, 2, 3, or 4.")
