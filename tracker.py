@@ -47,3 +47,16 @@ def add_expense():
     descriptions.append(description)
 
     print("\nExpense added successfully!")
+
+def view_all_expenses():
+    print("\nAll Expenses:")
+    
+    if (len(categories)) == 0:
+        print("No expenses recorded.")
+        return
+
+    for i in range(len(categories)):
+        print("\n Expense", i +1)
+        print("Category:", categories[i])
+        print("Amount: $", format(amounts[i], ".2f"))
+        print("Description:", descriptions[i])
