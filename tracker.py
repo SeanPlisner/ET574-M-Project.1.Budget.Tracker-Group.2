@@ -1,12 +1,13 @@
 from data import categories, amounts, descriptions
 
 
+
 def add_expense():
     print("\nAdd Expense")
     
     category = input("Enter the category of the expense: ")
 
-    if catergory == "":
+    if category == "":
         print("Category cannot be empty. Please try again.")
         return
 
@@ -48,6 +49,8 @@ def add_expense():
 
     print("\nExpense added successfully!")
 
+
+
 def view_all_expenses():
     print("\nAll Expenses:")
     
@@ -60,3 +63,23 @@ def view_all_expenses():
         print("Category:", categories[i])
         print("Amount: $", format(amounts[i], ".2f"))
         print("Description:", descriptions[i])
+
+
+def summary_report():
+    print("\nSummary Report:")
+    
+    if len(amounts) == 0:
+        print("No expenses recorded.")
+        return
+
+    total = sum(amounts)
+    number_of_expenses = len(amounts)
+    average = total / number_of_expenses
+    highest = max(amounts)
+    lowest = min(amounts)
+
+    print("Total Expenses: $", format(total, ".2f"), sep="")
+    print("Number of Expenses:", number_of_expenses)
+    print("Average Expense: $", format(average, ".2f"), sep="")
+    print("Highest Expense: $", format(highest, ".2f"), sep="")
+    print("Lowest Expense: $", format(lowest, ".2f"), sep="")
